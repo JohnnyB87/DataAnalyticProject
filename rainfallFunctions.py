@@ -12,7 +12,7 @@ column = {"Year": 0, "Month": 1, "Total": 2, "Most": 3, "Rain Days": 4}
 
 # function that returns a numPy array associated with the county chosen
 def openFile(county):
-    return np.loadtxt("rainFallData/" + county + "Rainfall.txt")
+    return np.loadtxt("../rainFallData/" + county + "Rainfall.txt")
 
 
 # function that reads all files from the rainFallData directory that end in Rainfall.txt
@@ -20,7 +20,7 @@ def openFile(county):
 # dictionary keys are the county names
 def readAllFiles():
     # get files from directory and stores as a tuple
-    fnames = glob('rainFallData/*Rainfall.txt')
+    fnames = glob('../rainFallData/*Rainfall.txt')
     # sort the tuple
     fnames.sort()
     # create empty dictionary
@@ -36,8 +36,8 @@ def readAllFiles():
 
 # function that prints a columns max value and the columns average
 def printColumnData(file, columnKey):
-    print("Most Rainfall: %.2fmm" % np.amax(file[:, column[columnKey]], axis=0))
-    print("Average Rainfall: %.2fmm" % np.mean(file[:, column[columnKey]], axis=0))
+    print("Most Rainfall: {:.2f}mm".format(np.amax(file[:, column[columnKey]], axis=0)))
+    print("Average Rainfall: {:.2f}mm".format(np.mean(file[:, column[columnKey]], axis=0)))
 
 
 # function that prints the total rainfall per county
@@ -51,14 +51,14 @@ def totalRainfallStatsAll(dic):
     for key, value in dic.items():
         # get the total value of specified column and assign it to total variable
         total = np.sum(dic[key][:, column["Total"]], axis=0)
-        # compare toatl with the current max value
+        # compare total with the current max value
         if total > maxValue:
             # if total is greater assign maxValue its new value
             # and assign the associated county to the county variable
             maxValue = total
             county = key
-        print("%s\t:\t%.2fmm" % (key, total))
-    print("Wettest location: %s with %.2fmm" % (county, maxValue))
+        print("{}\t:\t{:.2f}mm".format(key, total))
+    print("Wettest location: {} with {:.2f}mm".format(county, maxValue))
 
 
 # function that asks for user to input some data
@@ -89,4 +89,4 @@ def percentageOfRainfall(dic):
         res = count + noOfZeros
         # calculate the percentage
         percentage = res/length*100
-        print("%s\t:\t%.2f%%" % (key, percentage))
+        print("{}\t:\t{:.2f}%".format(key, percentage))

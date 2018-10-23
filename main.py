@@ -3,8 +3,6 @@
 # SDH3-A
 
 # imports
-import numpy as np
-from glob import glob
 import rainfallFunctions as rf
 
 
