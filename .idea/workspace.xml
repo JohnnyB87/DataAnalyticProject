@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f2b50f-d476-4156-abf0-2d33eace875f" name="Default Changelist" comment="comments added&#10;files added&#10;tidied code&#10;created a new script that holds the functions associated with the files">
+    <list default="true" id="43f2b50f-d476-4156-abf0-2d33eace875f" name="Default Changelist" comment="used print format to print float values to two decimal places">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
@@ -34,14 +34,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3952" />
-          <entry key="txt" value="120" />
+          <entry key="py" value="3956" />
+          <entry key="txt" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="120" />
-          <entry key="Python" value="3952" />
+          <entry key="PLAIN_TEXT" value="193" />
+          <entry key="Python" value="3956" />
         </counts>
       </usages-collector>
     </session>
@@ -63,11 +63,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/rainfallFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="304">
+              <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1540336534031" expanded="true" signature="2375:2747" ph="..." />
+                <marker date="1540336594003" expanded="true" signature="2379:2751" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,7 +100,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -188,15 +188,22 @@
       <option name="project" value="LOCAL" />
       <updated>1540320295291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="used print format to print float values to two decimal places">
+      <created>1540336759778</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540336759778</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23851204" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.116204694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -206,7 +213,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40087622" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39696312" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -226,7 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comments added&#10;files added&#10;tidied code&#10;created a new script that holds the functions associated with the files" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments added&#10;files added&#10;tidied code&#10;created a new script that holds the functions associated with the files" />
+    <MESSAGE value="used print format to print float values to two decimal places" />
+    <option name="LAST_COMMIT_MESSAGE" value="used print format to print float values to two decimal places" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/fileFunctions.py">
@@ -244,11 +252,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/rainfallFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="304">
+          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1540336534031" expanded="true" signature="2375:2747" ph="..." />
+            <marker date="1540336594003" expanded="true" signature="2379:2751" ph="..." />
           </folding>
         </state>
       </provider>

@@ -36,8 +36,8 @@ def readAllFiles():
 
 # function that prints a columns max value and the columns average
 def printColumnData(file, columnKey):
-    print("Most Rainfall: ", np.amax(file[:, column[columnKey]], axis=0))
-    print("Average Rainfall: ", np.mean(file[:, column[columnKey]], axis=0))
+    print("Most Rainfall: %.2fmm" % np.amax(file[:, column[columnKey]], axis=0))
+    print("Average Rainfall: %.2fmm" % np.mean(file[:, column[columnKey]], axis=0))
 
 
 # function that prints the total rainfall per county
@@ -57,8 +57,8 @@ def totalRainfallStatsAll(dic):
             # and assign the associated county to the county variable
             maxValue = total
             county = key
-        print(key, " : ", total)
-    print("Wettest location: ", county, " with ", maxValue, "mm")
+        print("%s\t:\t%.2fmm" % (key, total))
+    print("Wettest location: %s with %.2fmm" % (county, maxValue))
 
 
 # function that asks for user to input some data
@@ -88,5 +88,5 @@ def percentageOfRainfall(dic):
         # add the number of zeros to the current count of numbers less than the threshold
         res = count + noOfZeros
         # calculate the percentage
-        percentage = length/res*100
-        print(key, " : ", percentage, "%")
+        percentage = res/length*100
+        print("%s\t:\t%.2f%%" % (key, percentage))
