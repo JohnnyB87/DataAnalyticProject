@@ -12,7 +12,7 @@ column = {"Year": 0, "Month": 1, "Total": 2, "Most": 3, "Rain Days": 4}
 
 # function that returns a numPy array associated with the county chosen
 def openFile(county):
-    return np.loadtxt("../rainFallData/" + county + "Rainfall.txt")
+    return np.loadtxt("rainFallData/" + county + "Rainfall.txt")
 
 
 # function that reads all files from the rainFallData directory that end in Rainfall.txt
@@ -20,7 +20,7 @@ def openFile(county):
 # dictionary keys are the county names
 def readAllFiles():
     # get files from directory and stores as a tuple
-    fnames = glob('../rainFallData/*Rainfall.txt')
+    fnames = glob('rainFallData/*Rainfall.txt')
     # sort the tuple
     fnames.sort()
     # create empty dictionary
