@@ -64,7 +64,7 @@ def getCounty(choice):
 def runOptionMain(choice):
     if 0 < choice < 4:  # if choice is between the values 0 and 4 exclusive
         userInput = -1  # set initial value for userInput variable
-        while userInput < 0 or userInput > 5:   # loops until a valid choice is entered
+        while userInput < 1 or userInput > 5:   # loops until a valid choice is entered
             printSecondaryMenu()    # function to print the secondary menu
             try:    # try except to handle wrong input types
                 # gets user input and assigns it to userInput variable
@@ -76,14 +76,17 @@ def runOptionMain(choice):
                 print("Enter a number")
         county = getCounty(userInput)   # get the county associated with userInput and assign it to a variable
         file = rf.openFile(county)  # get the text file associated with the county chosen
-        print("\n\n", county)
+        # print("\n\n", county)
         # if else statement to call the function associated with the users input
         if choice == 1:
-            rf.printColumnData(file, "Total")
+            print("{}: Max Total Rainfall in a Day = {:.2f}mm".format(county, rf.getMaxValue(file, "Total")))
+            print("{}: Average Total Rainfall in a Day = {:.2f}mm".format(county, rf.getAverageValue(file, "Total")))
         elif choice == 2:
-            rf.printColumnData(file, "Most")
+            print("{}: Max Most Rainfall in a Day = {:.2f}mm".format(county, rf.getMaxValue(file, "Most")))
+            print("{}: Average Most Rainfall in a Day = {:.2f}mm".format(county, rf.getAverageValue(file, "Most")))
         elif choice == 3:
-            rf.printColumnData(file, "Rain Days")
+            print("{}: Max Number of Rain days = {:.2f}".format(county, rf.getMaxValue(file, "Rain Days")))
+            print("{}: Average Number of Rain days = {:.2f}".format(county, rf.getAverageValue(file, "Rain Days")))
     else:
         dic = rf.readAllFiles()
         if choice == 4:

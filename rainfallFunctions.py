@@ -34,10 +34,14 @@ def readAllFiles():
     return dic  # return the dictionary
 
 
-# function that prints a columns max value and the columns average
-def printColumnData(file, columnKey):
-    print("Most Rainfall: {:.2f}mm".format(np.amax(file[:, column[columnKey]], axis=0)))
-    print("Average Rainfall: {:.2f}mm".format(np.mean(file[:, column[columnKey]], axis=0)))
+# function that returns a columns max value
+def getMaxValue(file, columnKey):
+    return np.amax(file[:, column[columnKey]], axis=0)
+
+
+# function that returns a columns average value
+def getAverageValue(file, columnKey):
+    return np.mean(file[:, column[columnKey]], axis=0)
 
 
 # function that prints the total rainfall per county
