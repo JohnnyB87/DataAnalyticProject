@@ -18,6 +18,7 @@ def main():
             break
 
 
+# method that loops until an available option is selected
 def getUserInput(start, end):
     userInput = -1  # set initial value for userInput variable
     while userInput < start or userInput > end:  # loop until a valid number is entered
