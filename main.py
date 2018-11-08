@@ -9,23 +9,31 @@ import rainfallFunctions as rf
 # main function
 def main():
     while True:     # infinite loop
-        userInput = 0   # set initial value for userInput variable
-        while userInput < 1 or userInput > 6:   # loop until a valid number is entered
-            printMainMenu()     # calls function that prints out the main menu
-            try:    # try except to handle wrong input types
-                # gets user input and assigns it to userInput variable
-                # try's to convert input to an integer
-                userInput = int(input("Please select one of the above options: "))
-            except ValueError:  # if conversion fails
-                # assign userInput the value -1 to continue the while loop
-                userInput = -1
-                print("Enter a number.")
+        userInput = getUserInput(1, 6)
         # if userInput is not 6 call the runOptionMain function
         if userInput != 6:
-            runOptionMain(userInput)
+            processChoice(userInput)
         else:
             print("\n\nYou Exited the program")
             break
+
+
+def getUserInput(start, end):
+    userInput = -1  # set initial value for userInput variable
+    while userInput < start or userInput > end:  # loop until a valid number is entered
+        if end == 6:
+            printMainMenu()  # calls function that prints out the main menu
+        else:
+            printSecondaryMenu()
+        try:  # try except to handle wrong input types
+            # gets user input and assigns it to userInput variable
+            # try's to convert input to an integer
+            userInput = int(input("Please select one of the above options: "))
+        except ValueError:  # if conversion fails
+            # assign userInput the value -1 to continue the while loop
+            userInput = -1
+            print("Enter a number.")
+    return userInput
 
 
 # function to print the main menu
@@ -61,22 +69,12 @@ def getCounty(choice):
 
 
 # function that takes the users choice and runs the necessary functions associated with that choice
-def runOptionMain(choice):
+def processChoice(choice):
     if 0 < choice < 4:  # if choice is between the values 0 and 4 exclusive
-        userInput = -1  # set initial value for userInput variable
-        while userInput < 1 or userInput > 5:   # loops until a valid choice is entered
-            printSecondaryMenu()    # function to print the secondary menu
-            try:    # try except to handle wrong input types
-                # gets user input and assigns it to userInput variable
-                # try's to convert input to an integer
-                userInput = int(input("Please select a location: "))
-            except ValueError:  # if conversion fails
-                # assign userInput the value -1 to continue the while loop
-                userInput = -1
-                print("Enter a number")
+        userInput = getUserInput(1, 5)
         county = getCounty(userInput)   # get the county associated with userInput and assign it to a variable
         file = rf.openFile(county)  # get the text file associated with the county chosen
-        # print("\n\n", county)
+        print("\n")
         # if else statement to call the function associated with the users input
         if choice == 1:
             print("{}: Max Total Rainfall in a Day = {:.2f}mm".format(county, rf.getMaxValue(file, "Total")))
